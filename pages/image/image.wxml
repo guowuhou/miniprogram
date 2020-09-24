@@ -1,0 +1,26 @@
+<!--pages/image/image.wxml-->
+<!-- image的基本使用 -->
+<!-- 重点：1.image组件可以写成单标签，也可以写成双标签
+      2.image组件默认有自己的大小320*240
+      3.是行内块级元素
+-->
+<!-- <image></image> -->
+<!-- <image/> -->
+
+<!-- 1.src: 本地地址/远程地址 -->
+<!-- <image src="../assests/image/mticorn.png"></image> -->
+<image src="/pages/assests/image/mticorn.png"></image>
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>
+
+<!-- 2.补充 相册中的图片-->
+<button bindtap="handlechooseAlbum">选中图片</button>
+<image src="{{imagepath}}"></image>
+
+<!-- 3. bindload 监听图片加载完成 以及lazy-load懒加载-->
+<image wx:for="{{4}}" wx:key="key" lazy-load src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" bindload="handleImageLoad"></image>
+
+<!-- 4. show-menu-by-longpress 长按图片出现实现小程序码-->
+<image show-menu-by-longpress src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" bindload="handleImageLoad"></image>
+
+<!-- 5. mode图片的缩放模式，有很多的值具体参考官方文档-->
+<image src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg"></image>

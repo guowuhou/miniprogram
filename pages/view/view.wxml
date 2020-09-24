@@ -1,0 +1,18 @@
+<!--pages/view/view.wxml-->
+<!-- 1.view的基本使用 -->
+<view class="box">呵呵呵</view>
+<view>
+  <text>哈哈哈</text>
+</view>
+
+<!-- 2.hover-class :当用户按下组件时，显示的样式-->
+<!-- 3.hover-stay-time :当用户按下组件时，样式停留的时间-->
+<view class="box1" hover-class="hoverview" hover-stay-time="400">box1</view>
+
+<!-- 4.hover-stop-propagation 阻止祖先组件的点击态-->
+<view class="box2" hover-class="hoverCls">
+  <view class="box1" 
+  hover-class="hoverview" 
+  hover-stop-propagation
+  hover-stay-time="400">box1</view>
+</view>
