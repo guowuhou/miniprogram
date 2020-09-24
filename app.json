@@ -1,6 +1,32 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/about"
-  ]
+    "pages/about/about",
+    "pages/profile/profile"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ff5777",
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "开发小程序",
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "dark",
+    "enablePullDownRefresh": false
+  },
+  "tabBar": {
+    "selectedColor": "#ff5777",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "我的",
+        "iconPath": "assests/tabbar/my.png",
+        "selectedIconPath": "assests/tabbar/my_active.png"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "电影",
+        "iconPath": "assests/tabbar/movie.png",
+        "selectedIconPath": "assests/tabbar/active_movie.png"
+      }
+    ]
+  }
 }

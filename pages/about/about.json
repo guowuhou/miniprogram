@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarTitleText": "当前是电影页面",
+  "navigationBarBackgroundColor": "#ff0000",
+  "backgroundColor": "#eeeeee",
+  "enablePullDownRefresh": true
 }
