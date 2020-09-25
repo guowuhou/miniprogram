@@ -1,0 +1,30 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- 错误的写法 -->
+
+<!-- wxs的定义方法 1.1第一种写法直接写在wxml文件中 -->
+<!-- <wxs module="info">
+    //js代码
+    var message = "hello world";
+    var name = "coderlive";
+
+    var sum = function(num1, num2){
+        return num1 + num2;
+    };
+    module.exports = {
+      message:message,
+      name: name,
+      sum: sum
+    }
+</wxs> -->
+
+<!-- wxs的定义方法 1.2第二种写法直接写外部wxl文件中 在使用<wxs>标签进行引入 -->
+  <!-- 不能使用绝对路径，只能使用相对路径 -->
+<wxs src="../../wxs/info.wxs" module="info"></wxs>
+
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sum(2, 3)}}</view>
+
+<!-- wxs的应用 -->
+<wxs src="../../wxs/format.wxs" module="format"></wxs>
+<view>{{format.priceFormat(price, 2)}}</view>

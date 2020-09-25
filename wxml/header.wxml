@@ -1,0 +1,4 @@
+<vie>
+  <include src="./nav.wxml" />
+  <view>我是头部啊</view>
+</vie>

@@ -1,0 +1,74 @@
+<!--pages/wxml/wxml.wxml-->
+<!-- wxml的格式 -->
+<!-- <div></div>
+<image/>
+<input/> -->
+
+<!-- Mustache -->
+<view>{{message}}</view>
+<view>{{firstName}}{{lastName}}</view>
+<view>{{firstName + ' ' +lastName}}</view>
+<view>{{age > 18 ? '成年人' : '未成年人'}}</view>
+<view>{{nowTime}}</view>
+<button size="mini" bindtap="handlecolor">切换颜色</button>
+<view class="box {{isActive ? 'active' : ''}}">哈哈哈哈</view>
+
+
+<!-- 条件判断 -->
+<button size="mini" bindtap="handleswitch">控制显示与隐藏</button>
+<view wx:if="{{isShow}}">改革</view>
+
+<!-- wx:elif/wx:else -->
+<view wx:if="{{score >= 90}}">优秀</view>
+<view wx:elif="{{score >= 80}}">良好</view>
+<view wx:elif="{{score >= 60}}">及格</view>
+<view wx:else>不及格</view>
+
+<!-- hidden属性 -->
+<view hidden="{{false}}">优秀</view>
+
+<view>-------------------</view>
+<!-- wx:for回顾 -->
+<!-- wx:for遍历数组/字符串/数字 -->
+<view wx:for="{{['abc', 'bcd', 'dfg']}}" wx:key="key">{{item}}--{{index}}</view>
+<view wx:for="code" wx:key="key">{{item}}--{{index}}</view>
+<view wx:for="{{3}}" wx:key="key">{{item}}--{{index}}</view>
+<view wx:for="6" wx:key="key">{{item}}</view>
+
+<!-- <block>标签</block>帮助包裹 不会渲染和耗费性能 性能高 只接受控制属性不是组件-->
+<block wx:if="{{isShow}}">
+  <button size="mini">哈哈哈</button>
+  <view>不会发生</view>
+</block>
+
+<!-- item index起名字 -->
+<!-- <view wx:for="{{movies}}">{{item}} -- {{index}}</view> -->
+<view wx:for="{{movies}}" wx:key="key" wx:for-item="movie" wx:for-index="i">{{movie}} -- {{i}}</view>
+
+<!-- key的作用 提供性能-->
+<view wx:for="{{movies}}" wx:key="item">{{item}}</view>
+
+<view>-------template---------</view>
+<!-- 之前的时候小程序不支持自定义组件，为了进行代码的复用：template -->
+<!-- 模版中包裹的内容在没有使用前，是不会进行任何渲染的 -->
+<!-- <template name="contents">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template> -->
+
+<!-- 关于wxml的导入有两种方式 -->
+<!-- import导入：1.主要的是导入template,2.特点：不能进行递归导入 -->
+<!-- include引入：1.将公共的wxml中的组件抽取到一个文件中  2.特点:不能导入template/wxs,可以进行递归导入-->
+<import src="../../wxml/template.wxml"/>
+
+<template is="contents" data="{{btnText: '按钮哦', content: '哈哈哈'}}"></template>
+<template is="contents" data="{{btnText: '按钮2', content: '嘿嘿和'}}"></template>
+
+<!-- include可以循环导入，即在导入的文件里也有引用include的导入 而template不行-->
+<include src="../../wxml/header.wxml"></include>
+<include src="../../wxml/footer.wxml"></include>
+
+<!-- 为什么要设计wxs语言呢 -->
+<!-- 在wxml中是不能直接调用page/component中定义的函数的。 -->
+<!-- 但是某些情况下，我们可以希望使用函数来处理wxml中的数据(类似于vue中的过滤器)，这个时候就使用wxs了 -->
+<!-- <view>{{25.66666}}</view> -->
