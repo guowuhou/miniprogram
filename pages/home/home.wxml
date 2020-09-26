@@ -1,3 +1,22 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
+<!-- 1.Toast弹框 -->
+<view>
+  <button size="mini" bindtap="handleShow">showToast</button>
+</view>
+
+<!-- 2.Modal弹框 -->
+<view>
+  <button size="mini" bindtap="handleModal">showModal</button>
+</view>
+
+<!-- 3.Loading弹框 -->
+<view>
+  <button size="mini" bindtap="handleLoading">showLoading</button>
+</view>
+
+<!-- 4.actionSheet弹框 -->
+<view>
+  <button size="mini" bindtap="handleAction">showAction</button>
+</view>
