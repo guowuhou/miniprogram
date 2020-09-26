@@ -1,18 +1,12 @@
-// pages/home/home.js
+// pages/comment/comment.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title: '哈哈哈哈'
+
   },
-  handlePage() {
-    wx.navigateTo({
-      url: '/pages/detail/detail?title=hello'
-    })
-  },
- 
 
   /**
    * 生命周期函数--监听页面加载
