@@ -1,6 +1,10 @@
 {
   "pages": [
     "pages/home/home",
-    "pages/about/about"
-  ]
+    "pages/about/about",
+    "components/my-cpn/my-cpn",
+    "components/cpn1/cpn1",
+    "components/my-style/my-style"
+  ],
+  "usingComponents": {}
 }

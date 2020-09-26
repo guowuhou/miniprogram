@@ -1,0 +1,5 @@
+/* components/cpn2/cpn1.wxss */
+.cpnCls{
+  color: red;
+  font-size: 30px;
+}

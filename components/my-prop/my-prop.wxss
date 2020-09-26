@@ -1,0 +1,9 @@
+/* components/my-prop/my-prop.wxss */
+.titles{
+  /* color: rgb(233, 13, 196); */
+  font-size: 24rpx;
+}
+.content{
+  color: green;
+  font-size: 30rpx;
+}

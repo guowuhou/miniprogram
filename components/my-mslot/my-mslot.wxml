@@ -1,0 +1,6 @@
+<!--components/my-mslot/my-mslot.wxml-->
+<view>我是插槽的头部111</view>
+<slot class="slot1" name="slot1"></slot>
+<slot class="slot2" name="slot2"></slot>
+<slot class="slot3" name="slot3"></slot>
+<view>我是插槽的尾部111</view>
