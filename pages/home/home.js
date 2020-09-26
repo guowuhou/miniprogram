@@ -60,7 +60,13 @@ Page({
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
-
+  onShareAppMessage: function (options) {
+    return {
+      title: '你好啊',
+      //分享给别人时，别人点击进入时的url
+      path: '/pages/about/about',
+      //分享时,在别人手机中显示的图片
+      imageUrl: ''
+    }
   }
 })

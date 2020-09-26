@@ -1,3 +1,8 @@
 <!--pages/home/home.wxml-->
 <text class="title">hello world</text>
 <button size="mini">按钮</button>
+<!-- 小程序的分享1.可以点击自带的直接分享 -->
+<!-- 小程序的分享2.自己添加分享按钮 -->
+<view>
+  <button size="mini" open-type="share">分享</button>
+</view>
