@@ -3,3 +3,12 @@
   color: red;
   font-size: 30px;
 }
+.fixed{
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+  right: 0rpx;
+  background: white;
+  z-index: 1;
+}
+
